@@ -1,8 +1,10 @@
 ## Live Demo [Here](https://chinedu-website.firebaseapp.com/)
 
+![screenshot1](https://user-images.githubusercontent.com/7928001/31205070-7d10b366-a902-11e7-9e25-6f8fe5da6828.png)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 
-## Development server
+## Run  server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
