@@ -1,0 +1,68 @@
+
+@keyframes dertop {
+    from {
+      opacity: 0;
+      margin-top: 7%;
+    }
+    
+    to {
+      opacity: 1;
+      margin-top: 0%;
+    }
+  }
+  
+
+.center_items{
+    margin-top: 0%;
+    text-align: center;
+    animation-direction: normal;
+    animation-name: dertop;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+    li {
+        text-align: center;
+        list-style: none;
+        display:inline-block;
+        vertical-align:middle;
+        margin: 1%;
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 1%;
+        border: 1px solid #CCCCCC
+      }
+
+    .badges{
+     border-radius: 10px;
+     height: 16em auto;
+     width: 14em;
+    
+    }
+
+    .stars{
+        height: 16em auto;
+        width: 7em;
+       
+       }
+
+    h1{
+      margin-top: 30px;
+      color: #666666;
+      font-size: 1.3em;
+    }
+    
+   }
+
+   h1{
+    margin-top: 3%;
+    color: #666666;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 10px;
+  }
+
+
+  .right{
+    color: #D6D5D5;
+    margin: 3%;
+}
+  

@@ -1,0 +1,280 @@
+@import
+"~minx/src/settings",
+"~minx/src/functions",
+"~minx/src/mixins";
+
+@keyframes imbound {
+  from {
+    opacity: .4;
+
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes outbound {
+  from {
+    opacity: 0;
+    margin-top: 2%;
+  }
+  
+  to {
+    opacity: 1;
+    margin-top: 0%;
+  }
+}
+
+
+.right{
+  color: #D6D5D5;
+  margin: 0%;
+}
+
+.header {
+  font-family: 'MyWebFont', Fallback, sans-serif;
+  padding:0px 0;
+  height: 100px auto;
+  overflow: hidden;
+  background-size: 100% 100%;
+  background: #FFFFFF;
+  color: #FFFFFF;
+  line-height: 40px;
+  z-index: 0;
+  top: 0px;
+  border: 1px solid #D6D5D5;
+}
+
+
+@media only screen and (max-width: 768px) {
+   .header {
+    position: fixed;
+    z-index: 3;
+    float: right;
+    padding:-10px 0;
+   }
+
+
+
+  }
+
+
+
+.center{
+  font-family: 'MyWebFont', Fallback, sans-serif;
+  margin-top: 6%;
+  text-align: center;
+  display: block !important;
+  background-size: 100% 100%;
+  background: #FFFFFF;
+  color: #414141;
+  line-height: 40px;
+}
+
+
+
+.center_items{
+ margin-top: 0%;
+ text-align: center;
+ img{
+  border-radius: 100px;
+  height: 10em;
+  width: 10em;
+  
+ }
+ h1{
+   margin-top: 0px;
+   font-family: 'MyWebFont', Fallback, sans-serif;
+ }
+ 
+}
+
+
+.header__title {
+  text-align: center;
+  font-size: rem(21px);
+  font-weight: 400;
+  text-rendering: auto;
+  transform: translate(0,0);
+  margin-top: 40px;
+  background: #FDFDFD;
+  border-radius: 4px;
+  padding: 0 14px 0 14px;
+  color: #444;
+  &:before {
+    padding-right: 5px;
+    font-family: 'FontAwesome';
+    line-height: 20px;
+  }
+
+  a{
+    color: #D7D6D6;
+  }
+}
+
+
+.header__links {
+  margin-left: 28%;
+  margin-top: 0%;
+  
+  li {
+    float: left;
+    text-align: center;
+    list-style: none;
+  }
+}
+
+.top__links {
+  text-align: center;
+  
+  li {
+    text-align: center;
+    list-style: none;
+    display:inline-block;
+    vertical-align:middle;
+    color: #6B6A6A;
+    margin: 2%;
+  }
+  
+
+ 
+    .banner3{
+      border-radius: 50%;
+      height: auto;
+      width: 2.8em;
+      margin-top: 3%;
+      border: 1.2px solid #D7D6D6;
+      cursor: pointer;
+      
+     }
+   
+   
+   .banner1:hover{
+    background-color: #9B9A9A;
+    color: #FFFFFF;
+    animation-direction: alternate;
+    animation-name: imbound;
+    animation-iteration-count: 1;
+   }
+
+}
+
+
+
+.top__link--tutorial {
+  font-size: rem(18px);
+  padding: 0 12px 0 12px;
+  border-radius: 4px;
+  width: auto;
+  margin: 0%;
+  border: 1px solid #D7D6D6;
+  cursor: pointer;
+  
+}
+.top__link--tutorial:hover{
+  background-color: #9B9A9A;
+  color: #FFFFFF;
+  animation-direction: alternate;
+  animation-name: imbound;
+  animation-iteration-count: 1;
+ }
+
+
+
+.top__link--skills {
+  font-size: rem(18px);
+  padding: 0 12px 0 12px;
+  border-radius: 4px;
+  margin: 0%;
+  width: auto;
+  border: 1px solid #D7D6D6;
+  cursor: pointer;
+ 
+}
+.top__link--skills:hover{
+  background-color: #9B9A9A;
+  color: #FFFFFF;
+  animation-direction: alternate;
+  animation-name: imbound;
+  animation-iteration-count: 1;
+ }
+
+
+.top__link--home {
+  font-size: rem(18px);
+  padding: 0 12px 0 12px;
+  border-radius: 4px;
+  margin: 0%;
+  width: auto;
+  border: 1px solid #D7D6D6;
+  cursor: pointer;
+}
+
+.top__link--home:hover{
+  background-color: #9B9A9A;
+  color: #FFFFFF;
+  animation-direction: alternate;
+  animation-name: imbound;
+  animation-iteration-count: 1;
+ }
+
+.top__link--education {
+  font-size: rem(18px);
+  padding: 0 14px 0 14px;
+  border-radius: 4px;
+  margin: 0%;
+  width: auto;
+  border: 1px solid #D7D6D6;
+  cursor: pointer;
+  
+}
+
+.top__link--education:hover{
+  background-color: #9B9A9A;
+  color: #FFFFFF;
+  animation-direction: alternate;
+  animation-name: imbound;
+  animation-iteration-count: 1;
+ }
+
+.top__link--contact {
+  font-size: rem(18px);
+  padding: 0 12px 0 12px;
+  border-radius: 4px;
+  margin: 0%;
+  width: auto;
+  border: 1px solid #D7D6D6;
+  cursor: pointer;
+ 
+}
+.top__link--contact:hover{
+  background-color: #9B9A9A;
+  color: #FFFFFF;
+  animation-direction: alternate;
+  animation-name: imbound;
+  animation-iteration-count: 1;
+ }
+
+.top__link--works {
+  font-size: rem(18px);
+  padding: 0 12px 0 12px;
+  border-radius: 4px;
+  margin: 0%;
+  width: auto;
+  border: 1px solid #D7D6D6;
+  cursor: pointer;
+  
+}
+.top__link--works:hover{
+  background-color: #9B9A9A;
+  color: #FFFFFF;
+  animation-direction: alternate;
+  animation-name: imbound;
+  animation-iteration-count: 1;
+ }
+
+ router-link-active{
+   display: none;
+ }

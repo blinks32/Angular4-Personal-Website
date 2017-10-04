@@ -1,0 +1,104 @@
+
+<hr class='right'>
+<ul class="center_items">
+   
+       <li *ngIf='current_id == 1'><img class='badges' src='../assets/tutorial_images/device.jpg'>
+        <h1><strong>{{title}}</strong></h1>
+        <h3>After searching around for the best device to device notification tool, I found Onesignal. Onesignal is a free tool and has excellent documentation. And it even got better after i merged it with firebase database. 
+           </h3>
+        <p></p>
+         <h3>Before you start this, please make sure you know how to setup the onesignal notification for ionic3 by going to this link  <a href="http://www.codingandclimbing.co.uk/blog/ionic-2-setup-push-notifications-for-android-with-onesignal">Onesignal Notification Setup For Ionic2/3</a> </h3>
+         <p></p>
+         <h3>Now lets get into this. First We <a href="https://console.firebase.google.com">create a firebase account here</a>, Then we start a new project and call it Project Container.</h3>
+         <img class='badges' src='../assets/tutorial_images/firebase2.png'>
+         <h3>Next, We Setup The Mini Project by choosing Android as our project platform.</h3>
+         <img class='badges' src='../assets/tutorial_images/firebase.png'>
+         <h3>Lets call this a mini project, project A.</h3>
+         <p></p>
+         <h3>Now Lets hit the ground coding,</h3>
+         <p></p>
+         <h3>Now To set up firebase for ionic3, First run</h3>
+      
+           <textarea name="styled-textarea" id="styled">
+              npm install -g ionic cordova
+           </textarea> 
+           <h3>We will create a blank app for this project. Create The App By,</h3>
+           <textarea name="styled-textarea" id="styled">
+              ionic start
+           </textarea> 
+           <h3>Choose A Blank project from the list presented to you, Next run</h3>
+           <textarea name="styled-textarea" id="styled">
+             npm install firebase angulafire2@latest --save
+           </textarea> 
+           <h3>Then Initialize the project and import firebase into the app.module.ts file </h3>
+           <textarea name="styled-textarea" id="styled">
+              import { NgModule, ErrorHandler } from '@angular/core';
+              import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+              import { MyApp } from './app.component';
+              import { HomePage } from '../pages/home/home';
+              
+              // Import AngularFire2 Module
+              import { AngularFireModule } from 'angularfire2';
+              
+              // AngularFire2 Settings (from Firebase)
+              export const firebaseConfig = {
+                  apiKey: "aSuEXTJAIzaTESTSuOTJ66ox_F0uOTJzXY",
+                  authDomain: "example.firebaseapp.com",
+                  databaseURL: "https://example.firebaseio.com",
+                  storageBucket: "",
+                  messagingSenderId: "0101010101"
+              };
+          
+              ...
+              //Don't forget to Import AngularFire here
+              imports: [
+                  IonicModule.forRoot(MyApp),
+                  AngularFireModule.initializeApp(firebaseConfig)
+              ],
+            </textarea> 
+            <h3>Now Import Onesignal, in app.module.ts add this </h3>
+            <textarea name="styled-textarea" id="styled">
+                import { OneSignal} from '@ionic-native/onesignal';
+
+                providers: [OneSignal]
+              </textarea> 
+              <h3>Then update user onesignal id in the database for the first time the user starts the app, we will use this to send notification to a specific user.</h3>
+              <textarea name="styled-textarea" id="styled">
+                      let _userprofile = firebase.database().ref(`UserProfile/`);
+
+                      this.One.getIds().then( success => { 
+                        _userprofile.set({
+                          onesignal_ID: success.userId
+                        })
+              
+                </textarea>
+                <h3>Now We will get the recievers onesignal id from the database </h3>
+                <textarea name="styled-textarea" id="styled">
+                    let _userprofile = firebase.database().ref(`UserProfile/`);
+                    let reciever_ID;
+
+                    _userprofile.on('value', Snapshot => {
+                    reciever_ID = Snapshot.val().onesignal_ID
+                    })
+                   
+                </textarea>
+                <h3>We will Now Send A notification To this user using the reciever id gotten from the database </h3>
+                <textarea name="styled-textarea" id="styled">
+                  
+                   let notificationObj:any = {
+                     include_player_ids:  reciever_ID,
+                     contents: {en: "Hello, This Is My First Notification With Onesignal"},
+                     };
+                 
+                 Onesignal.postNotification(notificationObj).then( success => {
+                     console.log("Notification Post Success:", success);
+                   }, error => {
+                     console.log(error);
+                     alert("Notification Post Failed:\n" + JSON.stringify(error));
+                   });
+               
+                </textarea>
+                <h3>That's All Folks. Check It Out In My <a href="https://console.firebase.google.com">Github Profile</a></h3>
+            </li>
+        
+</ul>

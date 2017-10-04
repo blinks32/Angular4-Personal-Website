@@ -1,0 +1,258 @@
+@import
+"~minx/src/settings",
+"~minx/src/functions",
+"~minx/src/mixins";
+
+
+@keyframes wiki {
+  from {
+    opacity: 0;
+    margin-top: 5px;
+  }
+  
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+@keyframes _wiki {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+.header {
+  padding-top: 15%;
+  height: 100% auto;
+  overflow: hidden;
+  background-size: 100% 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)) ,url('../../assets/myCover.jpg')no-repeat center center fixed;
+  color: #FFFFFF;
+  line-height: 40px;
+  text-align: center;
+  animation-direction: alternate;
+  animation-name: wiki;
+  animation-duration: 0.7s;
+  animation-iteration-count: 1;
+}
+
+
+.center_items{
+  margin-top: -13%;
+  text-align: center;
+  .myslides2{
+    img{
+   border-radius: 3%;
+   height: 17em auto;
+   width: 12em;
+   animation-direction: alternate;
+   animation-name: _wiki;
+   animation-duration: 0.7s;
+   animation-iteration-count: 1;
+   text-align: center;
+    }
+  }
+
+  .myslides{
+    img{
+    border-radius: 3%;
+    height: 17em auto;
+    width: 12em;
+    animation-direction: alternate;
+    animation-name: _wiki;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+    text-align: center;
+    }
+   }
+ 
+  h1{
+    margin-top: 60px;
+    color: #FCFCFC;
+  }
+  
+ }
+
+ .myslides3{
+  border-radius: 3%;
+  height: 17em auto;
+  width: auto;
+  animation-direction: alternate;
+  animation-name: _wiki;
+  animation-duration: 0.7s;
+  animation-iteration-count: 1;
+}
+
+.myslide{
+  border-radius: 3%;
+  height: 17em auto;
+  width: auto;
+  animation-direction: alternate;
+  animation-name: _wiki;
+  animation-duration: 0.7s;
+  animation-iteration-count: 1;
+}
+
+.header__title {
+  text-align: center;
+  font-size: rem(21px);
+  font-weight: 400;
+  text-rendering: auto;
+  transform: translate(0,0);
+  margin-top: 40px;
+  border-radius: 4px;
+ 
+  color: #636262;
+  
+  
+  a{
+    color: #D7D6D6;
+  }
+  
+}
+
+.bottom{
+  margin-top: 60px;
+  color: #FFFFFF;
+}
+
+
+
+.header__links {
+  margin-top: 0%;
+   
+  li {
+    display:inline-block;
+    vertical-align:middle;
+    margin: 2%;
+    color: #666666;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #727272;
+    
+  }
+}
+
+.top__links {
+  margin-top: 0%;
+  text-align: center;
+  li {
+    text-align: center;
+    list-style: none;
+    display:inline-block;
+    vertical-align:middle;
+    padding: 0 14px 0 14px;
+    background: #FDFDFD;
+    border-radius: 4px;
+    color: #444;
+    margin-top: 4%;
+  }
+}
+
+
+
+.header__link {
+  display: block;
+  text-align: center;
+  color: inherit;
+  font-size: rem(14px);
+  text-decoration: none;
+  text-rendering: auto;
+  transform: translate(0,0);
+}
+
+
+
+
+.header__link--facebook {
+  @include fa-icon(facebook);
+  font-size: rem(21px);
+  
+  &:before {
+    font-family: 'FontAwesome';
+    line-height: 20px;
+   
+  }
+}
+
+.header__link--github {
+  @include fa-icon(github);
+  font-size: rem(21px);
+  &:before {
+    font-family: 'FontAwesome';
+    line-height: 20px;
+  }
+}
+
+.header__link--linkedIn {
+  @include fa-icon(linkedin);
+  font-size: rem(21px);
+  &:before {
+    font-family: 'FontAwesome';
+    line-height: 20px;
+  }
+}
+
+.header__link--stackoverflow {
+  @include fa-icon(stack-overflow);
+  font-size: rem(21px);
+  &:before {
+    font-family: 'FontAwesome';
+    line-height: 20px;
+  }
+}
+
+
+
+
+.top__link--tutorial {
+  font-size: rem(18px);
+  padding: 0 14px 0 14px;
+  background: #FDFDFD;
+  border-radius: 4px;
+  color: #444;
+  width: 150px;
+  margin: 3%;
+}
+
+
+.top__link--skills {
+  font-size: rem(18px);
+  padding: 0 14px 0 14px;
+  background: #FDFDFD;
+  border-radius: 4px;
+  color: #444;
+  margin: 3%;
+ 
+  width: 150px;;
+}
+
+
+.top__link--works {
+  font-size: rem(18px);
+  padding: 0 14px 0 14px;
+  background: #FDFDFD;
+  border-radius: 4px;
+  color: #444;
+  margin: 3%;
+ 
+  width: 150px;
+}
+
+.right{
+  color: #D6D5D5;
+  margin: 3%;
+}
+
+
+a{
+  line-height: 0px;
+  color: #F7F7F7;
+}

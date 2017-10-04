@@ -1,0 +1,32 @@
+<header  [@heroState]="state" class="header">
+    <div class="g-row">
+      <div class="g-col">
+        <div *ngIf='smallDevice'>
+          <div class="center" *ngIf='canShow' (click)='MytoggleMore()'><i class="fa fa-close" style="font-size:30px; color:#969696"></i></div>
+          <div class="center" *ngIf='!canShow' (click)='MytoggleMore()'><i class="fa fa-bars" style="font-size:28px; color:#969696"></i></div>
+      </div>
+      
+        <div *ngIf='smallDevice'>
+          <ul  *ngIf='toggleMore' class="top__links">
+            <li><img class="banner3" [routerLink]="['/']"  (click)='toggleMore = false; canShow=false ' src='../assets/myImage.jpg'></li>
+            <li (click)='toggleMore = false; canShow=false'><div class="top__link--skills" [routerLink]="['/skills']" >Skills</div> </li>
+              <li><div class="top__link--works" [routerLink]="['/works']"  (click)='toggleMore = false; canShow=false'>Services</div></li>
+              <li><div class="top__link--education" [routerLink]="['/education']" (click)='toggleMore = false; canShow=false'>Experience</div></li>
+              <li><div class="top__link--tutorial"  [routerLink]="['/tutorials']" (click)='toggleMore = false; canShow=false'>Tutorials</div></li>
+              <li><div class="top__link--works" [routerLink]="['/contact']" (click)='toggleMore = false; canShow=false'>Contact</div></li>
+      </ul>
+    </div>
+      <div *ngIf='!smallDevice'>
+      <ul  *ngIf='toggleMore' class="top__links" >
+          <li><div class='banner1'><img class="banner3" [routerLink]="['/']" routerLinkActive="router-link-active"   src='../assets/myImage.jpg'></div></li>
+          <li ><div class="top__link--skills" [routerLink]="['/skills']"  >Skills</div> </li>
+            <li><div class="top__link--works" [routerLink]="['/works']" >Services</div></li>
+            <li><div class="top__link--education" [routerLink]="['/education']" >Experience</div></li>
+            <li><div class="top__link--tutorial"  [routerLink]="['/tutorials']" >Tutorials</div></li>
+            <li><div class="top__link--works" [routerLink]="['/contact']" >Contact</div></li>
+    </ul>
+      </div>
+     
+      </div>
+    </div>
+  </header>
